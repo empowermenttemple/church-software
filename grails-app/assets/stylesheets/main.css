@@ -1,0 +1,604 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+/* RESET */
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time { margin: 0; padding: 0; }
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th,figcaption { font-size: 1em; font-weight: normal; font-style: normal; }
+fieldset,iframe { border: none; }
+caption,th { text-align: left; }
+table { border-collapse: collapse; border-spacing: 0; }
+article,aside,footer,header,hgroup,nav,section,figure,figcaption { display: block; }
+/* FONT STACK */
+body,
+input, select, textarea {
+	font-family: 'Lato',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.1;
+}
+
+/* BASE LAYOUT */
+legend{
+	font-family: 'Lato',Verdana,sans;
+	font-size: 110%;
+
+}
+
+html {
+	background-color: #fff;
+	height: 100%;
+}
+
+
+
+.ie6 html {
+	height: 100%;
+}
+
+html * {
+	margin: 0;
+}
+
+body {
+	background: #fff;
+	color: #333333;
+	margin: 0 0 20px;
+	max-width: 100%;
+	height: 100%;
+}
+.container{
+	background: #fff;
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	margin: 0 20em -2em 16em;
+}
+
+.ie6 body {
+	height: 100%;
+}
+.labelButton{
+	width: 100px;
+	cursor: pointer;	
+	background: none;
+	background-color: rgb(61, 157, 179);
+	padding: 10px 5px;
+	font-family: 'Lato','Arial Narrow',Arial,sans-serif;
+	color: #fff;
+	font-size: 0.85em;	
+	border: none;	
+	text-align: center;
+}
+
+
+a:hover, a:active {
+color: #fff;
+outline: none; /* prevents outline in webkit on active links but retains it for tab focus */
+}
+a {
+	color: #d0F;
+	text-decoration: none;
+}
+.table-link{
+	color: green;
+	text-decoration: none;
+}
+
+
+ul {
+	padding: 0;
+}
+
+img {
+	border: 0;
+	outline: none;
+}
+
+/* GENERAL */
+
+.content {
+}
+
+
+
+.scaffold-list h1 {
+	border: none;
+}
+
+.footer {
+	background: royalblue;
+	color: #fff;
+	clear: both;
+	font-size: 1em;
+	height: 2em;
+	text-align: center;
+}
+
+.footer a {
+	color: white;
+	outline: none;
+}
+.gap_50{
+	margin:9em;
+}
+.gap_10{
+	margin:1em;
+}
+#appName{
+	float: right;
+}
+.appHeader{
+	color: white;
+	background-color: royalblue;
+	padding: 5px;
+}
+.container{
+	width: 80%;
+	min-Width: 800px;
+}
+.searchBtn{
+	
+}
+
+
+
+
+
+
+
+/* CREATE/EDIT FORMS AND SHOW PAGES */
+
+fieldset,
+.property-list {
+	margin: 0.6em 1.25em 0 1.25em;
+	padding: 0.3em 1.8em 1.25em;
+	position: relative;
+	zoom: 1;
+}
+fieldset{
+	border: 2px solid whitesmoke;
+	width: 70%;
+}
+fieldset form{
+	text-align: auto;
+	padding: 1em;
+}
+.member-search-option{
+	margin-right: 0;
+}
+.property-list .fieldcontain {
+	list-style: none;
+	overflow: hidden;
+	zoom: 1;
+}
+#by-name{
+margin-left: -3px;
+}
+.fieldcontain {
+	margin-top: 1em;
+}
+
+.fieldcontain label,
+.fieldcontain .property-label {
+	color: #666666;
+	text-align: right;
+	width: 25%;
+}
+
+.fieldcontain .property-label {
+	float: left;
+}
+
+.fieldcontain .property-value {
+	display: block;
+	margin-left: 27%;
+}
+
+label {
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0.25em 0 0;
+}
+
+input, select, textarea {
+	background-color: #fcfcfc;
+	border: 1px solid #cccccc;
+	font-size: 1em;
+	padding: 0.2em 0.4em;
+}
+
+select {
+	padding: 0.2em 0.2em 0.2em 0;
+}
+
+select[multiple] {
+	vertical-align: top;
+}
+
+textarea {
+	width: 250px;
+	height: 150px;
+	overflow: auto; /* IE always renders vertical scrollbar without this */
+	vertical-align: top;
+}
+
+input[type=checkbox], input[type=radio] {
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+}
+
+input:focus, select:focus, textarea:focus {
+	background-color: #ffffff;
+	border: 1px solid #eeeeee;
+	outline: 0;
+	   -moz-box-shadow: 0 0 0.5em #ffffff;
+	-webkit-box-shadow: 0 0 0.5em #ffffff;
+	        box-shadow: 0 0 0.5em #ffffff;
+}
+
+.required-indicator {
+	color: #48802C;
+	display: inline-block;
+	font-weight: bold;
+	margin-left: 0.3em;
+	position: relative;
+	top: 0.1em;
+}
+
+ul.one-to-many {
+	display: inline-block;
+	list-style-position: inside;
+	vertical-align: top;
+}
+
+.ie6 ul.one-to-many, .ie7 ul.one-to-many {
+	display: inline;
+	zoom: 1;
+}
+
+ul.one-to-many li.add {
+	list-style-type: none;
+}
+
+/* EMBEDDED PROPERTIES */
+
+fieldset.embedded {
+	background-color: transparent;
+	border: 1px solid #CCCCCC;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+fieldset.embedded legend {
+	margin: 0 1em;
+}
+/*Horizontal Line**/
+.line2{
+	border: 2px solid lavender;
+}
+
+/*Label*/
+.form-header{
+	text-transform: uppercase;
+	padding-bottom: 0.5em;
+	font-size: 180%;
+	color: #009E60;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+/* MESSAGES AND ERRORS */
+
+.errors,.error {
+	font-family: 'Lato',Verdana,sans;
+	color: #cc0010;
+	margin-left: 5px;
+}
+.info{
+	border-top: 4px solid green;
+	border-bottom: 4px solid green;
+	color: royalblue;
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 2;
+	margin: 1em 2em;
+	padding: 0.35em;
+}
+
+.message {
+	background: #f3f3ff;
+	border-top: 2px solid #b2d1ff;
+	border-bottom: 2px solid #b2d1ff;
+	color: royalblue;
+	text-align: center;
+}
+
+#errors ul{
+	list-style: none;
+}
+#errors  ul  li{
+		margin-left: 0.5em;
+		padding: 2px;
+}
+.errors ul,
+.message {
+	padding: 0;
+}
+
+.errors li {
+	list-style: none;
+	text-indent: 2.2em;
+}
+
+.message {
+	text-indent: 2.2em;
+}
+
+
+
+/* same effects for browsers that support HTML5 client-side validation (these have to be specified separately or IE will ignore the entire rule) */
+
+input:invalid, select:invalid, textarea:invalid {
+	background: #fff3f3;
+	border-color: #ffaaaa;
+	color: #cc0000;
+}
+
+input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
+	   -moz-box-shadow: 0 0 0.5em #ffaaaa;
+	-webkit-box-shadow: 0 0 0.5em #ffaaaa;
+	        box-shadow: 0 0 0.5em #ffaaaa;
+}
+
+
+.odd {
+	background-color: white;
+}
+
+.even {
+	background-color: whitesmoke;
+}
+
+
+
+/* PAGINATION */
+
+.pagination {
+	border-top: 0;
+	margin: 0;
+	padding: 0.3em 0.2em;
+	text-align: center;
+	background-color: #31bc86;
+}
+
+.pagination a,
+.pagination .currentStep {
+	color: #fff;
+	display: inline-block;
+	margin: 0 0.1em;
+	padding: 0.25em 0.7em;
+	text-decoration: none;
+	   -moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	        border-radius: 0.3em;
+}
+.currentuser{
+		padding: 0 30px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: bold;
+		font-size: 100%;
+}
+.pagination a:hover, .pagination a:focus,
+.pagination .currentStep {
+	background-color: #fff;
+	color: #31bc86;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.no-borderradius .pagination a:hover, .no-borderradius .pagination a:focus,
+.no-borderradius .pagination .currentStep {
+	background-color: transparent;
+	color: #444444;
+	text-decoration: underline;
+}
+
+
+.lampstand-wrapper {
+                width: 94%;
+                max-width: 900px;
+                min-width: 280px;
+                margin: 0 auto 30px auto;
+                position: relative;
+                padding: 20px;
+                box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+}
+
+.gap_1{
+	padding-top: 8em;
+}
+.lampstand-show:hover {
+                color: #535B31;
+}
+.button{
+width: 30%;
+	cursor: pointer;	
+	background: none;
+	background-color: rgb(61, 157, 179);
+	padding: 10px 5px;
+	font-family: 'Lato','Arial Narrow',Arial,sans-serif;
+	color: #fff;
+	font-size: 110%;	
+	border: none;	
+	margin: 1px 0 1px 0;
+}
+.lampstand-show-input {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+                width: 190px;
+                height: 24px;
+                opacity: 0;
+}
+.lampstand-show-input:checked ~ .lampstand-show {
+                background: #cae082;
+                color: #535B31;
+                box-shadow: 0 1px 2px rgba(255,255,255,0.6);
+}
+ 
+.lampstand-form {
+                padding: 10px 0px;
+}
+.lampstand-form:before,
+.lampstand-form:after {
+    content:"";
+    display:table;
+}
+.lampstand-form:after {
+    clear:both;
+}
+.lampstand-outer {
+                box-shadow: 0 1px 0 #f5f5f5 inset;
+                -webkit-transition: 0.5 0.5s linear;
+                -moz-transition: all 0.5s linear;
+                -o-transition: all 0.5s linear;
+                -ms-transition: all 0.5s linear;
+                transition: all 0.5s linear;
+}
+.lampstand-inner {
+                padding: 15px 20px 15px 20px;
+               
+                -webkit-transition: all 0.5s linear;
+                -moz-transition: all 0.5s linear;
+                -o-transition: all 0.5s linear;
+                -ms-transition: all 0.5s linear;
+                transition: all 0.5s linear;
+}
+#lampstand-showreq:checked ~ .lampstand-form .lampstand-outer.lampstand-required {
+                background: #fffde3;
+}
+#lampstand-showreq:checked ~ .lampstand-form .lampstand-outer:not(.lampstand-required) .lampstand-inner {
+                opacity: 0.4;
+}
+.lampstand-form #label {
+                display: block;
+                display: -webkit-box;
+                display: -moz-box;
+                display: box;      
+                -moz-box-orient: horizontal;
+                -moz-box-pack: end;
+                -moz-box-align: center;
+                -webkit-box-orient: horizontal;
+                -webkit-box-pack: end;
+                -webkit-box-align: center;
+                box-orient: horizontal;
+                box-pack: end;
+                box-align: center;
+                height: 40px;
+                float: left;
+                padding-right: 3%;
+                width: 30%;
+                min-width: 80px;
+                font-size: 13px;
+                color: #888;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                text-align: right;
+                text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+}
+.lampstand-form .af-required #label {
+                color: #555;
+}
+.lampstand-form input[type="text"],
+.lampstand-form select,
+.lampstand-form input[type=email],
+.lampstand-form input[type=date] {
+               
+                border: 1px solid #ddd;
+                padding: 10px;
+                font-weight: bold;
+                text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+                color: #666;
+                background: #ffffff;
+                background: -moz-linear-gradient(top, #ffffff 0%, #f7f7f7 7%, #f7f7f7 22%, #ffffff 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,#f7f7f7), color-stop(22%,#f7f7f7), color-stop(100%,#ffffff));
+                background: -webkit-linear-gradient(top, #ffffff 0%,#f7f7f7 7%,#f7f7f7 22%,#ffffff 100%);
+                background: -o-linear-gradient(top, #ffffff 0%,#f7f7f7 7%,#f7f7f7 22%,#ffffff 100%);
+                background: -ms-linear-gradient(top, #ffffff 0%,#f7f7f7 7%,#f7f7f7 22%,#ffffff 100%);
+                background: linear-gradient(top, #ffffff 0%,#f7f7f7 7%,#f7f7f7 22%,#ffffff 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+                box-shadow: 0px 1px 1px rgba(255,255,255,0.7), 1px 1px 2px rgba(0,0,0,0.1) inset;
+}
+.lampstand-form input:focus {
+                background: #f9fcef;
+                outline: none;
+}
+.lampstand-form input[type="submit"],
+.lampstand-form input[type="reset"] {
+                border: 1px solid #EF9309;
+                text-shadow: 0px 1px 1px rgba(255,255,255,0.4);
+                color: white;
+                display: inline-block;
+                border-radius: 4px;
+                margin-top: 10px;
+                margin-left: 33%;
+                padding: 6px 15px;
+                font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+                font-weight: bold;
+                background: #ffaf4b;
+                background: -moz-linear-gradient(top, #ffaf4b 0%, #ff920a 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffaf4b), color-stop(100%,#ff920a));
+                background: -webkit-linear-gradient(top, #ffaf4b 0%,#ff920a 100%);
+                background: -o-linear-gradient(top, #ffaf4b 0%,#ff920a 100%);
+                background: -ms-linear-gradient(top, #ffaf4b 0%,#ff920a 100%);
+                background: linear-gradient(top, #ffaf4b 0%,#ff920a 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a',GradientType=0 );
+                box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+.lampstand-form input[type="submit"]:active {
+                box-shadow: 0px 1px 2px rgba(255,255,255,0.5);
+                background: #ffaf4b;
+}
+::-webkit-validation-bubble{
+                z-index: 100000;
+ 
+}
+@media screen and (max-width: 780px) {
+                .lampstand-wrapper {
+                                background-position: 220px 60px;
+                }
+                .lampstand-wrapper h3 {
+                                padding-bottom: 50px;
+                }
+                .lampstand-show {
+                                top: 66px;
+                                right: auto;
+                                left: 30px;
+                }
+}
+@media screen and (max-width: 385px) {
+                .lampstand-wrapper {
+                                background: #fff;
+                }
+}
+@media screen and (max-width: 330px) {
+                .lampstand-form label,
+                .lampstand-form input[type=text],
+                .lampstand-form input[type=email],
+                .lampstand-form input[type=date]{
+                                width: 100%;
+                }
+                .lampstand-form #label{
+                                -moz-box-pack: center;
+                                -webkit-box-pack: center;
+                                box-pack: center;
+                                text-align: center;
+                }
+}
+/**End **********/
